@@ -8,17 +8,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.joker.cosmos_android.Database.Algorithms;
 import com.example.joker.cosmos_android.R;
 import com.example.joker.cosmos_android.Utils.DataSet;
+
+import java.util.List;
 
 public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.ViewHolder> {
 
     private Context context;
-    private String[] algorithmsNames = null;
+    private List<Algorithms> algorithms;
 
     public AlgorithmAdapter(Context context) {
         this.context = context;
-        this.algorithmsNames = DataSet.algorithms;
     }
 
     @NonNull
@@ -33,13 +35,18 @@ public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.algoTextView.setText(algorithmsNames[position]);
+        holder.algoTextView.setText(algorithms.get(position).getAlgoName());
 
     }
 
     @Override
     public int getItemCount() {
-        return algorithmsNames == null ? 0 : algorithmsNames.length;
+        return algorithms == null ? 0 : algorithms.size();
+    }
+
+    public void setAlgorithms(List<Algorithms> algorithms){
+        this.algorithms = algorithms;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

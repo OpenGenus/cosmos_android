@@ -19,10 +19,10 @@ public class Repositiory {
     private static Repositiory INSTANCE;
 
     //get instance of repository
-    public static Repositiory getInstance(Application application){
+    public static Repositiory getInstance(Context context){
 
         if(INSTANCE == null){
-            INSTANCE = new Repositiory(application.getApplicationContext());
+            INSTANCE = new Repositiory(context.getApplicationContext());
         }
 
         return INSTANCE;
