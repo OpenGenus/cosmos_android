@@ -6,7 +6,7 @@ import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.Database;
 import android.content.Context;
 
-@Database(entities = {Algorithms.class}, version = 1)
+@Database(entities = {Algorithms.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static final String DATABASE_NAME = "cosmos_android.db" ;
