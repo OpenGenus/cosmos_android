@@ -1,4 +1,3 @@
-subAlgorithmsId,f,c,cpp,cs,elm,exs,data,go,h,hs,java,jl,js,kt,m,php,py,rb,rs,sh,sml,swift,ts,md
 1,,,,,,,,,,,,,,,,,dbscan.py,,,,,,,dbscan.md
 2,,,,,,,,,,,,,,,,,isodata.py,,,,,,,isodata.md
 3,,,,,,,,,,,linear_regression.java,,linearRegression.js,,,,linear_regression.py,,,,,linear_regression.swift,,linearRegression.md

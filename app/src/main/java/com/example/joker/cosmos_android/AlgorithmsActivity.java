@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.example.joker.cosmos_android.Adapter.AlgorithmAdapter;
 import com.example.joker.cosmos_android.Database.Algorithms;
@@ -34,7 +35,10 @@ public class AlgorithmsActivity extends AppCompatActivity {
         algorithmAdapter = new AlgorithmAdapter(AlgorithmsActivity.this);
         recyclerView.setAdapter(algorithmAdapter);
 
-        algorithmsViewModel.getAlgos().observe(AlgorithmsActivity.this, algorithms -> algorithmAdapter.setAlgorithms(algorithms));
+        algorithmsViewModel.getAlgos().observe(AlgorithmsActivity.this, algorithms -> {
+            algorithmAdapter.setAlgorithms(algorithms);
+            Log.d("test",""+algorithms.size());
+        });
 
     }
 }

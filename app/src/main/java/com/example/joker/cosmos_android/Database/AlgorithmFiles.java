@@ -20,6 +20,7 @@ public class AlgorithmFiles {
     private String data;
     private String go;
     private String h;
+    private String hs;
     private String java;
     private String jl;
     private String js;
@@ -34,6 +35,102 @@ public class AlgorithmFiles {
     private String swift;
     private String ts;
     private String md;
+
+    public void setId(@NonNull int id) {
+        this.id = id;
+    }
+
+    public void setF(String f) {
+        this.f = f;
+    }
+
+    public void setC(String c) {
+        this.c = c;
+    }
+
+    public void setCpp(String cpp) {
+        this.cpp = cpp;
+    }
+
+    public void setCs(String cs) {
+        this.cs = cs;
+    }
+
+    public void setElm(String elm) {
+        this.elm = elm;
+    }
+
+    public void setExs(String exs) {
+        this.exs = exs;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public void setGo(String go) {
+        this.go = go;
+    }
+
+    public void setH(String h) {
+        this.h = h;
+    }
+
+    public void setJava(String java) {
+        this.java = java;
+    }
+
+    public void setJl(String jl) {
+        this.jl = jl;
+    }
+
+    public void setJs(String js) {
+        this.js = js;
+    }
+
+    public void setKt(String kt) {
+        this.kt = kt;
+    }
+
+    public void setM(String m) {
+        this.m = m;
+    }
+
+    public void setPhp(String php) {
+        this.php = php;
+    }
+
+    public void setPy(String py) {
+        this.py = py;
+    }
+
+    public void setRb(String rb) {
+        this.rb = rb;
+    }
+
+    public void setRs(String rs) {
+        this.rs = rs;
+    }
+
+    public void setSh(String sh) {
+        this.sh = sh;
+    }
+
+    public void setSml(String sml) {
+        this.sml = sml;
+    }
+
+    public void setSwift(String swift) {
+        this.swift = swift;
+    }
+
+    public void setTs(String ts) {
+        this.ts = ts;
+    }
+
+    public void setMd(String md) {
+        this.md = md;
+    }
 
     @NonNull
     public int getId() {
@@ -130,5 +227,13 @@ public class AlgorithmFiles {
 
     public String getMd() {
         return md;
+    }
+
+    public String getHs() {
+        return hs;
+    }
+
+    public void setHs(String hs) {
+        this.hs = hs;
     }
 }
