@@ -6,7 +6,9 @@ import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
 
 import com.example.joker.cosmos_android.Database.Algorithms;
+import com.example.joker.cosmos_android.Database.SubAlgorithms;
 import com.example.joker.cosmos_android.Repositiory.Repository;
+import com.example.joker.cosmos_android.Utils.AlgorithmsClickListener;
 
 import java.util.List;
 
@@ -27,6 +29,11 @@ public class AlgorithmsViewModel extends AndroidViewModel {
     public LiveData<List<Algorithms>> getAlgos() {
         return algos;
     }
+
+    public LiveData<List<SubAlgorithms>> getSubAlgosById(String id){
+        return repository.getSubAlgoById(id);
+    }
+
 
 
 }

@@ -55,6 +55,13 @@ public class Repository {
         return allAlgos;
     }
 
+    //get SubAlgo by ids
+    public LiveData<List<SubAlgorithms>> getSubAlgoById(String id){
+        return subAlgorithmsDao.getSubAlgoById(id);
+    }
+
+
+    /****************Insertion code below******************/
 
     //insert algorithms
     public void insertAlgo(Algorithms algorithms){
@@ -117,6 +124,7 @@ public class Repository {
         new insertAlgoFilesAsync(algorithmFilesDao).execute(algorithmFiles);
 
     }
+
     //async insertiong of algo files
     static class insertAlgoFilesAsync extends AsyncTask<AlgorithmFiles,Void,Void>{
 

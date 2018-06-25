@@ -4,13 +4,14 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.joker.cosmos_android.Database.Algorithms;
 import com.example.joker.cosmos_android.R;
-import com.example.joker.cosmos_android.Utils.DataSet;
+import com.example.joker.cosmos_android.Utils.AlgorithmsClickListener;
 
 import java.util.List;
 
@@ -18,9 +19,11 @@ public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.View
 
     private Context context;
     private List<Algorithms> algorithms;
+    private AlgorithmsClickListener clickListener;
 
     public AlgorithmAdapter(Context context) {
         this.context = context;
+        clickListener = (AlgorithmsClickListener) context;
     }
 
     @NonNull
@@ -35,7 +38,8 @@ public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.algoTextView.setText(algorithms.get(position).getAlgoName());
+        //holder.algoTextView.setText(algorithms.get(position).getAlgoName());
+        holder.bind(algorithms.get(position));
 
     }
 
@@ -53,12 +57,24 @@ public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.View
 
         TextView algoTextView;
 
+        String id,algo;
+
         public ViewHolder(View itemView) {
             super(itemView);
 
             algoTextView = itemView.findViewById(R.id.algorithm_textView);
 
+            algoTextView.setOnClickListener((v)->clickListener.getSubAlgo(id));
+
         }
 
+        public void bind(Algorithms algorithms) {
+
+            id = algorithms.getId();
+            algo = algorithms.getAlgoName();
+
+            algoTextView.setText(algo);
+
+        }
     }
 }

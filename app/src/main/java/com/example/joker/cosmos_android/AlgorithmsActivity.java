@@ -12,11 +12,13 @@ import android.util.Log;
 
 import com.example.joker.cosmos_android.Adapter.AlgorithmAdapter;
 import com.example.joker.cosmos_android.Database.Algorithms;
+import com.example.joker.cosmos_android.Database.SubAlgorithms;
+import com.example.joker.cosmos_android.Utils.AlgorithmsClickListener;
 import com.example.joker.cosmos_android.ViewModel.AlgorithmsViewModel;
 
 import java.util.List;
 
-public class AlgorithmsActivity extends AppCompatActivity {
+public class AlgorithmsActivity extends AppCompatActivity implements AlgorithmsClickListener {
 
     private RecyclerView recyclerView;
     private AlgorithmAdapter algorithmAdapter;
@@ -38,6 +40,21 @@ public class AlgorithmsActivity extends AppCompatActivity {
         algorithmsViewModel.getAlgos().observe(AlgorithmsActivity.this, algorithms -> {
             algorithmAdapter.setAlgorithms(algorithms);
             Log.d("test",""+algorithms.size());
+        });
+
+
+
+    }
+
+    @Override
+    public void getSubAlgo(String id) {
+
+        algorithmsViewModel.getSubAlgosById(id).observe(AlgorithmsActivity.this, subAlgorithms -> {
+
+            for(SubAlgorithms subAlgo : subAlgorithms){
+                Log.d("subAlgoTest",subAlgo.toString());
+            }
+
         });
 
     }
