@@ -24,7 +24,7 @@ public interface SubAlgorithmsDao {
 
     //insert data into sub_algorithm
     @Insert(onConflict = IGNORE)
-    void insertSubAlgorithms(List<SubAlgorithms> subAlgorithms);
+    void insertSubAlgorithms(SubAlgorithms subAlgorithms);
 
 
 }

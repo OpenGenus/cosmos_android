@@ -18,6 +18,6 @@ public interface AlgorithmFilesDao {
 
     //insert files data at once
     @Insert(onConflict = IGNORE)
-    void insertAlgoFile(List<AlgorithmFiles> filesList);
+    void insertAlgoFile(AlgorithmFiles filesList);
 
 }

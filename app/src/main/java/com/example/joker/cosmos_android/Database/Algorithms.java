@@ -32,4 +32,12 @@ public class Algorithms {
     public void setAlgoName(@NonNull String algoName) {
         this.algoName = algoName;
     }
+
+//    @Override
+//    public String toString() {
+//
+//        String totData = id + " " + algoName;
+//
+//        return totData;
+//    }
 }

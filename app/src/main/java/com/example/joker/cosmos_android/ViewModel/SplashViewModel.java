@@ -3,6 +3,7 @@ package com.example.joker.cosmos_android.ViewModel;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.example.joker.cosmos_android.Database.AlgorithmFiles;
 import com.example.joker.cosmos_android.Database.Algorithms;
@@ -35,9 +36,23 @@ public class SplashViewModel extends AndroidViewModel {
 
         List<AlgorithmFiles> algorithmFiles = getAlgorithmFilesFromAsset();
 
-        repository.insertAlgo(algorithms);
-        repository.insertSubAlgo(subAlgorithms);
-        repository.insertAlgorithmFilesData(algorithmFiles);
+
+        for(Algorithms algo : algorithms){
+            repository.insertAlgo(algo);
+            Log.d("algo_test",algo.toString());
+        }
+        //repository.insertAlgo(algorithms);
+
+
+        for(SubAlgorithms subAlgo : subAlgorithms){
+            repository.insertSubAlgo(subAlgo);
+        }
+        //repository.insertSubAlgo(subAlgorithms);
+
+
+        for(AlgorithmFiles algoFiles : algorithmFiles){
+            repository.insertAlgoFiles(algoFiles);
+        }
 
     }
 

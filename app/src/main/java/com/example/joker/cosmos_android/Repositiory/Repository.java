@@ -55,33 +55,83 @@ public class Repository {
         return allAlgos;
     }
 
-    //insert algorithms
-    public void insertAlgo(List<Algorithms> algorithms){
 
-        insertDataAsync(algorithms,algorithmDao);
+    //insert algorithms
+    public void insertAlgo(Algorithms algorithms){
+
+        new insertAlgoAsync(algorithmDao).execute(algorithms);
 
     }
+
+    //async insertion of algorithm
+    static class insertAlgoAsync extends AsyncTask<Algorithms,Void,Void>{
+
+        AlgorithmDao algorithmDao;
+
+        public insertAlgoAsync(AlgorithmDao algorithmDao) {
+
+            this.algorithmDao = algorithmDao;
+        }
+
+        @Override
+        protected Void doInBackground(Algorithms... algorithms) {
+
+            algorithmDao.insertUser(algorithms[0]);
+
+            return null;
+        }
+    }
+
 
 
     //insert subAlgorithms
-    public void insertSubAlgo(List<SubAlgorithms> subAlgorithms){
+    public void insertSubAlgo(SubAlgorithms subAlgorithms){
 
-        subAlgorithmsDao.insertSubAlgorithms(subAlgorithms);
+        new insertSubAlgoAsync(subAlgorithmsDao).execute(subAlgorithms);
 
     }
+
+    //async insertion of sub algorithm
+    static class insertSubAlgoAsync extends AsyncTask<SubAlgorithms,Void,Void>{
+
+        private SubAlgorithmsDao subAlgorithmsDao;
+
+        public insertSubAlgoAsync(SubAlgorithmsDao subAlgorithmsDao) {
+            this.subAlgorithmsDao = subAlgorithmsDao;
+        }
+
+        @Override
+        protected Void doInBackground(SubAlgorithms... subAlgorithms) {
+
+            subAlgorithmsDao.insertSubAlgorithms(subAlgorithms[0]);
+
+            return null;
+        }
+    }
+
 
 
     //insert files data
-    public void insertAlgorithmFilesData(List<AlgorithmFiles> algorithmFiles){
+    public void insertAlgoFiles(AlgorithmFiles algorithmFiles){
 
-        algorithmFilesDao.insertAlgoFile(algorithmFiles);
-
-    }
-
-
-    private void insertDataAsync(List<Algorithms> algorithms, AlgorithmDao algorithmDao) {
-
-
+        new insertAlgoFilesAsync(algorithmFilesDao).execute(algorithmFiles);
 
     }
+    //async insertiong of algo files
+    static class insertAlgoFilesAsync extends AsyncTask<AlgorithmFiles,Void,Void>{
+
+        AlgorithmFilesDao filesDao;
+
+        public insertAlgoFilesAsync(AlgorithmFilesDao algorithmFilesDao) {
+            this.filesDao = algorithmFilesDao;
+        }
+
+
+        @Override
+        protected Void doInBackground(AlgorithmFiles... algorithmFiles) {
+                filesDao.insertAlgoFile(algorithmFiles[0]);
+            return null;
+        }
+    }
+
 }
