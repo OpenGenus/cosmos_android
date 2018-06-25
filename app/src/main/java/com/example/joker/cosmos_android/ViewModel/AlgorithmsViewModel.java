@@ -34,5 +34,4 @@ public class AlgorithmsViewModel extends AndroidViewModel {
         return repository.getSubAlgoById(id);
     }
 
-
 }
