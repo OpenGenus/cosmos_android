@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlgorithmsActivity"
+    tools:context=".Acitvity.AlgorithmsActivity"
     tools:openDrawer="end">
 
     <include layout="@layout/content_main"

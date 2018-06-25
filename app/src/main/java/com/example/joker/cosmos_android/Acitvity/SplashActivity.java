@@ -1,4 +1,4 @@
-package com.example.joker.cosmos_android;
+package com.example.joker.cosmos_android.Acitvity;
 
 import android.app.ProgressDialog;
 import android.arch.lifecycle.ViewModelProviders;
@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 
+import com.example.joker.cosmos_android.R;
 import com.example.joker.cosmos_android.ViewModel.SplashViewModel;
 
 public class SplashActivity extends AppCompatActivity {

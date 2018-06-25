@@ -35,5 +35,4 @@ public class AlgorithmsViewModel extends AndroidViewModel {
     }
 
 
-
 }

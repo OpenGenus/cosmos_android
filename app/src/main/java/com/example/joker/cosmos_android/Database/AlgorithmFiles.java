@@ -236,4 +236,39 @@ public class AlgorithmFiles {
     public void setHs(String hs) {
         this.hs = hs;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(String.valueOf(id)).append(" ");
+        builder.append(f).append(" ");
+        builder.append(c).append(" ");
+        builder.append(cpp).append(" ");
+        builder.append(cs).append(" ");
+        builder.append(elm).append(" ");
+        builder.append(exs).append(" ");
+        builder.append(data).append(" ");
+        builder.append(go).append(" ");
+        builder.append(h).append(" ");
+        builder.append(hs).append(" ");
+        builder.append(java).append(" ");
+        builder.append(jl).append(" ");
+        builder.append(js).append(" ");
+        builder.append(kt).append(" ");
+        builder.append(m).append(" ");
+        builder.append(php).append(" ");
+        builder.append(py).append(" ");
+        builder.append(rb).append(" ");
+        builder.append(rs).append(" ");
+        builder.append(sh).append(" ");
+        builder.append(sml).append(" ");
+        builder.append(swift).append(" ");
+        builder.append(ts).append(" ");
+        builder.append(md).append(" ");
+
+        String totData = builder.toString();
+
+
+        return totData;
+    }
 }
