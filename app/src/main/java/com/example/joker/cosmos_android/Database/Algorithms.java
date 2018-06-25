@@ -33,11 +33,11 @@ public class Algorithms {
         this.algoName = algoName;
     }
 
-//    @Override
-//    public String toString() {
-//
-//        String totData = id + " " + algoName;
-//
-//        return totData;
-//    }
+    @Override
+    public String toString() {
+
+        String totData = id + " " + algoName;
+
+        return totData;
+    }
 }

@@ -39,20 +39,20 @@ public class SplashViewModel extends AndroidViewModel {
 
         for(Algorithms algo : algorithms){
             repository.insertAlgo(algo);
-            Log.d("algo_test",algo.toString());
         }
         //repository.insertAlgo(algorithms);
 
 
         for(SubAlgorithms subAlgo : subAlgorithms){
-            repository.insertSubAlgo(subAlgo);
+            //repository.insertSubAlgo(subAlgo);
+            Log.d("algo_test",subAlgo.toString());
         }
-        //repository.insertSubAlgo(subAlgorithms);
-
-
-        for(AlgorithmFiles algoFiles : algorithmFiles){
-            repository.insertAlgoFiles(algoFiles);
-        }
+//        //repository.insertSubAlgo(subAlgorithms);
+//
+//
+//        for(AlgorithmFiles algoFiles : algorithmFiles){
+//            repository.insertAlgoFiles(algoFiles);
+//        }
 
     }
 

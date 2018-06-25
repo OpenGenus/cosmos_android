@@ -44,4 +44,10 @@ public class SubAlgorithms {
     public void setAlgorithmId(@NonNull String algorithmId) {
         this.algorithmId = algorithmId;
     }
+
+    @Override
+    public String toString() {
+        String totData = id + " " + subAlgorithm + " " + algorithmId;
+        return totData;
+    }
 }
