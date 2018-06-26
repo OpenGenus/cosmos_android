@@ -7,19 +7,20 @@ import android.support.annotation.NonNull;
 @Entity (tableName = "algorithm")
 public class Algorithms {
 
-    @NonNull
-    private int id;
-
     @PrimaryKey
+    @NonNull
+    private String id;
+
+
     @NonNull
     private String algoName;
 
     @NonNull
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(@NonNull int id) {
+    public void setId(@NonNull String id) {
         this.id = id;
     }
 
@@ -30,5 +31,13 @@ public class Algorithms {
 
     public void setAlgoName(@NonNull String algoName) {
         this.algoName = algoName;
+    }
+
+    @Override
+    public String toString() {
+
+        String totData = id + " " + algoName;
+
+        return totData;
     }
 }

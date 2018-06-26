@@ -1,19 +1,26 @@
-package com.example.joker.cosmos_android;
+package com.example.joker.cosmos_android.Acitvity;
 
+import android.app.ProgressDialog;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.joker.cosmos_android.Repositiory.Repositiory;
-import com.example.joker.cosmos_android.Utils.DatabaseInitializer;
+
+import com.example.joker.cosmos_android.R;
+import com.example.joker.cosmos_android.ViewModel.SplashViewModel;
 
 public class SplashActivity extends AppCompatActivity {
+
+    private SplashViewModel splashViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        splashViewModel = ViewModelProviders.of(this).get(SplashViewModel.class);
 
         //check for new user
         checkForUser();
@@ -32,26 +39,25 @@ public class SplashActivity extends AppCompatActivity {
 
         if(isNewUser){
 
-            initaliseDatabase();
+            ProgressDialog progressDialog = new ProgressDialog(SplashActivity.this);
+            progressDialog.setTitle("Preparing Database");
+            progressDialog.setTitle("Please wait...");
+            progressDialog.setCancelable(false);
+
+            splashViewModel.populateDatabase();
+
+            progressDialog.dismiss();
         }
 
         startMainActivity();
 
     }
 
-    private void initaliseDatabase() {
-
-        Repositiory repositiory = Repositiory.getInstance(SplashActivity.this);
-        DatabaseInitializer initializer = new DatabaseInitializer(repositiory);
-
-        initializer.insertAlogs();
-
-
-    }
-
     private void startMainActivity() {
 
         startActivity(new Intent(SplashActivity.this,AlgorithmsActivity.class));
+        finish();
 
     }
+
 }
