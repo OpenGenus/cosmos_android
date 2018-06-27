@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Cosmos_Android</string>
+    <string name="this_is_splash_activity" />
 </resources>
