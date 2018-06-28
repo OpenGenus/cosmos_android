@@ -1,5 +1,6 @@
-package com.example.joker.cosmos_android.Acitvity;
+package com.example.joker.cosmos_android.Adapter;
 
+import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,17 +11,20 @@ import com.example.joker.cosmos_android.Acitvity.Tab1;
 import com.example.joker.cosmos_android.Acitvity.Tab2;
 import com.example.joker.cosmos_android.Acitvity.Tab3;
 
-public class PageAdapter extends FragmentPagerAdapter {
-    int numofTabs;
-    public PageAdapter(FragmentManager fm,int NumofTabs) {
+public class TabPagerAdapter extends FragmentStatePagerAdapter {
+
+    private FragmentManager fragmentManager;
+    private Context context;
+
+    public TabPagerAdapter(FragmentManager fm,Context context) {
         super(fm);
-        this.numofTabs=NumofTabs;
+        this.fragmentManager = fm;
+        this.context = context;
     }
 
     @Override
     public Fragment getItem(int position) {
-        switch (position)
-        {
+        switch (position) {
             case 0:
                 return new Tab1();
             case 1:
@@ -36,17 +40,22 @@ public class PageAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return numofTabs;
+        return 3;
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        if(position==0)
-            return "TAB1";
-        else if(position==1)
-            return "TAB2";
-        else
-            return "TAB3";
+
+        switch (position){
+            case 0:
+                return "TAB1";
+            case 1:
+                return "TAB2";
+            case 2:
+                return  "TAB3";
+            default:
+                return null;
+        }
     }
 }

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/amber_700"
-    >
+    android:background="@color/amber_50">
 
-    <TextView
-        android:id="@+id/textView"
-        android:textSize="30dp"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/algoRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="Fragment1" />
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginStart="@dimen/small_margin" />
+
 </RelativeLayout>
