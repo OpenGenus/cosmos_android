@@ -1,5 +1,6 @@
 package com.example.joker.cosmos_android.Adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -21,17 +22,17 @@ import java.util.List;
 public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.ViewHolder> {
 
     private List<Algorithms> algorithms = new ArrayList<>();
-    private Context context;
+    private AlgorithmsClickListener clickListener;
 
-    public AlgorithmAdapter(Context context) {
-        this.context = context;
+    public AlgorithmAdapter(Tab1 context) {
+        clickListener = context;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(context).inflate(R.layout.algorithms_list_item,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.algorithms_list_item, parent, false);
         return new ViewHolder(v);
     }
 
@@ -57,7 +58,6 @@ public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        int id = 0;
         TextView textView = null;
 
         public ViewHolder(View itemView) {
@@ -69,8 +69,12 @@ public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.View
 
         public void bind(int position) {
 
-            id = position;
             textView.setText(algorithms.get(position).getAlgoName());
+
+            textView.setOnClickListener((v) -> {
+                String id = algorithms.get(position).getId();
+                clickListener.getSubAlgo(id);
+            });
 
         }
     }

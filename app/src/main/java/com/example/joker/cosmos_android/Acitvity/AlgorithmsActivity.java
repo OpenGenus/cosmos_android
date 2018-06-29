@@ -21,7 +21,7 @@ import com.example.joker.cosmos_android.R;
 import com.example.joker.cosmos_android.Utils.AlgorithmsClickListener;
 import com.example.joker.cosmos_android.ViewModel.AlgorithmsViewModel;
 
-public class AlgorithmsActivity extends AppCompatActivity{
+public class AlgorithmsActivity extends AppCompatActivity  {
 
     private RecyclerView recyclerView;
     private AlgorithmAdapter algorithmAdapter;

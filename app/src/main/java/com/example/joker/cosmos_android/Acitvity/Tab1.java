@@ -1,6 +1,8 @@
 package com.example.joker.cosmos_android.Acitvity;
 
+import android.app.Activity;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,11 +16,12 @@ import android.view.ViewGroup;
 
 import com.example.joker.cosmos_android.Adapter.AlgorithmAdapter;
 import com.example.joker.cosmos_android.R;
+import com.example.joker.cosmos_android.Utils.AlgorithmsClickListener;
 import com.example.joker.cosmos_android.ViewModel.AlgorithmsViewModel;
 
 import java.util.Objects;
 
-public class Tab1 extends Fragment {
+public class Tab1 extends Fragment implements AlgorithmsClickListener {
 
     private RecyclerView recyclerView;
     private AlgorithmAdapter algorithmAdapter;
@@ -36,7 +39,7 @@ public class Tab1 extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
-        algorithmAdapter = new AlgorithmAdapter(getContext());
+        algorithmAdapter = new AlgorithmAdapter(this);
 
         recyclerView.setAdapter(algorithmAdapter);
 
@@ -44,7 +47,7 @@ public class Tab1 extends Fragment {
         viewModel.getAlgos().observe(Objects.requireNonNull(getActivity()), algorithms -> {
 
             algorithmAdapter.setAlgorithms(algorithms);
-            Log.d("test", " returned length "+algorithms.size());
+//            Log.d("test", " returned length "+algorithms.size());
 
         });
 
@@ -52,4 +55,12 @@ public class Tab1 extends Fragment {
     }
 
 
+    @Override
+    public void getSubAlgo(String id) {
+
+        Intent intent = new Intent(getContext(),SubAlgoActivity.class);
+        intent.putExtra("id",id);
+        startActivity(intent);
+
+    }
 }

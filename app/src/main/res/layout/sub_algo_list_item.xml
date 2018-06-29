@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/medium_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/subAlgoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="BackTracking"
+        android:padding="@dimen/medium_padding"
+        android:textSize="@dimen/large_text"
+        android:textColor="@color/black_1000"/>
+
+</LinearLayout>
