@@ -7,9 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SnapHelper;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +15,6 @@ import android.view.ViewGroup;
 import com.example.joker.cosmos_android.Adapter.AlgorithmAdapter;
 import com.example.joker.cosmos_android.R;
 import com.example.joker.cosmos_android.ViewModel.AlgorithmsViewModel;
-import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper;
 
 import java.util.Objects;
 

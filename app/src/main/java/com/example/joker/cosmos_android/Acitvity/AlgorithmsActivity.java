@@ -41,18 +41,6 @@ public class AlgorithmsActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        algorithmsViewModel = ViewModelProviders.of(this).get(AlgorithmsViewModel.class);
-
-        //recyclerView setup
-
-//        recyclerView = findViewById(R.id.algorithm_recyclerView);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//
-//        algorithmAdapter = new AlgorithmAdapter(AlgorithmsActivity.this);
-//        recyclerView.setAdapter(algorithmAdapter);
-
-        //tabs setup
-
         toolbar=findViewById(R.id.toolbar);
         toolbar.setTitle(getResources().getString(R.string.app_name));
 
@@ -95,13 +83,6 @@ public class AlgorithmsActivity extends AppCompatActivity{
             @Override
             public void onTabReselected(TabLayout.Tab tab) { }
         });
-
-
-//        //observer to get list of algorithm
-//        algorithmsViewModel.getAlgos().observe(AlgorithmsActivity.this, algorithms -> {
-//            algorithmAdapter.setAlgorithms(algorithms);
-//            Log.d("test",""+algorithms.size());
-//        });
 
     }
 
