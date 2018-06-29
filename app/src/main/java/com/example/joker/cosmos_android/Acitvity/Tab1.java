@@ -19,6 +19,8 @@ import com.example.joker.cosmos_android.R;
 import com.example.joker.cosmos_android.Utils.AlgorithmsClickListener;
 import com.example.joker.cosmos_android.ViewModel.AlgorithmsViewModel;
 
+
+
 import java.util.Objects;
 
 public class Tab1 extends Fragment implements AlgorithmsClickListener {
