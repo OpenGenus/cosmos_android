@@ -21,11 +21,11 @@ import com.example.joker.cosmos_android.ViewModel.SubAlgoViewModel;
 
 import java.util.List;
 
-public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmClickListener {
+public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmClickListener{
 
     private SubAlgoViewModel viewModel;
 
-    private RecyclerView recyclerView, frecyclerView;
+    private RecyclerView recyclerView,frecyclerView;
     private SubAlgoAdapter adapter;
 
     private BottomSheetBehavior mBottomSheetBehavior;
@@ -37,22 +37,23 @@ public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmCl
 
         android.view.View bottomSheet = findViewById(R.id.bottom_sheet);
 
-        mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+       mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
 
 
         viewModel = ViewModelProviders.of(this).get(SubAlgoViewModel.class);
 
-        if (viewModel.getId() == null) {
+        if(viewModel.getId()  == null) {
             Intent intent = getIntent();
             String id = intent.getStringExtra("id");
             viewModel.setId(id);
         }
 
         recyclerView = findViewById(R.id.subAlgoRecyclerView);
-        // recyclerView.setLayoutManager(new LinearLayoutManager(this));
+       // recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-        GridLayoutManager manager = new GridLayoutManager(this, 2);
+
+        GridLayoutManager manager=new GridLayoutManager(this,2);
         manager.setSpanSizeLookup(new GridLayoutManager.DefaultSpanSizeLookup());
         recyclerView.setLayoutManager(manager);
 
@@ -67,8 +68,8 @@ public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmCl
 
             adapter.setAdapter(subAlgorithms);
 
-            for (SubAlgorithms subAlgo : subAlgorithms) {
-                Log.d("test", subAlgo.toString());
+            for(SubAlgorithms subAlgo : subAlgorithms){
+                Log.d("test",subAlgo.toString());
             }
         });
 
@@ -78,11 +79,13 @@ public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmCl
     @Override
     public void languages(int id) {
 
-        Toast.makeText(this, "heyy card" + id, Toast.LENGTH_SHORT).show();
-        if (mBottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
+        Toast.makeText(this,"heyy card"+id,Toast.LENGTH_SHORT).show();
+        if(mBottomSheetBehavior.getState()==BottomSheetBehavior.STATE_COLLAPSED) {
 
             mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-        } else {
+        }
+        else
+        {
             mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
         }
     }
