@@ -6,6 +6,7 @@ import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -23,18 +24,11 @@ import com.example.joker.cosmos_android.ViewModel.AlgorithmsViewModel;
 
 public class AlgorithmsActivity extends AppCompatActivity  {
 
-    private RecyclerView recyclerView;
-    private AlgorithmAdapter algorithmAdapter;
-//    private AlgorithmsViewModel algorithmsViewModel;
-
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private TabPagerAdapter tabPagerAdapter;
 
-    private TabItem tabchat;
-    private TabItem tabstatus;
-    private TabItem tabcalls;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,17 +36,21 @@ public class AlgorithmsActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
         toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         toolbar.setTitle(getResources().getString(R.string.app_name));
 
-        tabLayout=findViewById(R.id.tablayout);
+        final ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setDisplayHomeAsUpEnabled(false);
 
-        tabchat=findViewById(R.id.chat);
-        tabstatus=findViewById(R.id.status);
-        tabcalls=findViewById(R.id.call);
-
+        tabLayout=findViewById(R.id.tabLayout);
         viewPager=findViewById(R.id.pager);
 
         tabPagerAdapter =new TabPagerAdapter(getSupportFragmentManager(),this);
+        tabPagerAdapter.addFragment(new Tab1(),"TAB1");
+        tabPagerAdapter.addFragment(new Tab2(),"TAB2");
+        tabPagerAdapter.addFragment(new Tab3(),"TAB3");
+
         viewPager.setAdapter(tabPagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
