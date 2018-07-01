@@ -35,12 +35,12 @@ public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_algo);
 
+        viewModel = ViewModelProviders.of(this).get(SubAlgoViewModel.class);
+
         android.view.View bottomSheet = findViewById(R.id.bottom_sheet);
 
        mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
 
-
-        viewModel = ViewModelProviders.of(this).get(SubAlgoViewModel.class);
 
         if(viewModel.getId()  == null) {
             Intent intent = getIntent();
