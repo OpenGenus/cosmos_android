@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/amber_50"
-    tools:context=".Acitvity.SubAlgoActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Acitvity.SubAlgoActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/subAlgoRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/medium_margin"/>
+        android:layout_margin="@dimen/medium_margin" />
 
 
     <android.support.v4.widget.NestedScrollView
@@ -21,20 +21,14 @@
         android:layout_height="350dp"
         android:background="@android:color/holo_blue_light"
         app:behavior_hideable="true"
-        app:behavior_peekHeight="55dp"
+        app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp"
-            android:text="TEXT HERE"
-            android:textSize="16sp" />
         <android.support.v7.widget.RecyclerView
             android:id="@+id/fileRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/medium_margin"/>
+            android:layout_margin="@dimen/medium_margin" />
     </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
