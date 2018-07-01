@@ -5,6 +5,7 @@ import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
 
+import com.example.joker.cosmos_android.Database.AlgorithmFiles;
 import com.example.joker.cosmos_android.Database.SubAlgorithms;
 import com.example.joker.cosmos_android.Repositiory.Repository;
 
@@ -32,5 +33,9 @@ public class SubAlgoViewModel extends AndroidViewModel {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public LiveData<AlgorithmFiles> getFilesBySubAlgoId(int id) {
+        return repository.getFilesBySubAlgoId(id);
     }
 }

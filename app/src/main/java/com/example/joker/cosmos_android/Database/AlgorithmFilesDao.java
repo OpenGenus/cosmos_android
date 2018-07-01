@@ -1,5 +1,6 @@
 package com.example.joker.cosmos_android.Database;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
@@ -13,7 +14,7 @@ public interface AlgorithmFilesDao {
 
     //get files details of sub algorithm by id
     @Query("select * from file where id = :subAlgoId")
-    AlgorithmFiles getFilesById(int subAlgoId);
+    LiveData<AlgorithmFiles> getFilesById(int subAlgoId);
 
 
     //insert files data at once
