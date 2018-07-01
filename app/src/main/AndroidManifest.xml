@@ -17,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Acitvity.SubAlgoActivity"></activity>
+        <activity android:name=".Acitvity.SubAlgoActivity" />
+        <activity android:name=".Acitvity.TestActivity"></activity>
     </application>
 
 </manifest>
