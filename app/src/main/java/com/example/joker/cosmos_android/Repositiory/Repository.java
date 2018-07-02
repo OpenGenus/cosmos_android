@@ -70,6 +70,10 @@ public class Repository {
 
     }
 
+    public LiveData<AlgorithmFiles> getFilesBySubAlgoId(int id) {
+        return algorithmFilesDao.getFilesById(id);
+    }
+
     //async insertion of algorithm
     static class insertAlgoAsync extends AsyncTask<Algorithms,Void,Void>{
 

@@ -34,11 +34,11 @@ dependencies {
     //recyclerView and constraint layout
     implementation "com.android.support:recyclerview-v7:$support_version"
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    //live data
+    implementation "android.arch.lifecycle:livedata:$lifecycle_version"
     //veiwModel
     implementation "android.arch.lifecycle:extensions:$viewModel_version"
     annotationProcessor "android.arch.lifecycle:compiler:$viewModel_version"
-    //live data
-    implementation "android.arch.lifecycle:livedata:$lifecycle_version"
     //room dependencies
     implementation "android.arch.persistence.room:runtime:$room_version"
     annotationProcessor "android.arch.persistence.room:compiler:$room_version"
@@ -46,5 +46,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //support design
     implementation 'com.android.support:design:27.1.1'
+    //card view
+    implementation 'com.android.support:cardview-v7:27.1.1'
 }

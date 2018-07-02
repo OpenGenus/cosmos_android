@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Cosmos_Android</string>
     <string name="this_is_splash_activity" />
+    <string name="tab_chat">CHAT</string>
+    <string name="tab_status">STATUS</string>
+    <string name="tab_calls">CALLS</string>
 </resources>
