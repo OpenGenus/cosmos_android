@@ -230,7 +230,7 @@ public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmCl
 
         Toast.makeText(this,fileName,Toast.LENGTH_SHORT).show();
         Intent intent=new Intent(getApplicationContext(),File.class);
-        //intent.putExtra("filename",fileName);
+        intent.putExtra("filename",fileName);
         startActivity(intent);
 
 
