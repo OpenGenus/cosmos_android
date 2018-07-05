@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Acitvity.SubAlgoActivity" />
-        <activity android:name=".Acitvity.TestActivity"></activity>
+        <activity android:name=".Acitvity.File"></activity>
     </application>
 
 </manifest>
