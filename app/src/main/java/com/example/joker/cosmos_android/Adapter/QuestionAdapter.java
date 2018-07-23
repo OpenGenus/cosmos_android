@@ -15,7 +15,7 @@ import java.util.List;
 
 public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.PersonViewHolder> {
     private Context context;
-    private List<Question> questionList;
+    private List<Question> questionList = null;
 
     public QuestionAdapter(Context context, List<Question> questionList) {
         this.context = context;
@@ -25,10 +25,9 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Person
     @NonNull
     @Override
     public PersonViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.question_list_items, null);
-        PersonViewHolder holder = new PersonViewHolder(view);
-        return holder;
+        LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
+        View view = layoutInflater.inflate(R.layout.question_list_items, viewGroup, false);
+        return new PersonViewHolder(view);
 
 
     }
@@ -37,24 +36,21 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Person
     public void onBindViewHolder(@NonNull PersonViewHolder personViewHolder, int position) {
         Question question = questionList.get(position);
         personViewHolder.question.setText(question.getQuestion());
-        personViewHolder.answer.setText(question.getAnswer());
 
     }
 
     @Override
     public int getItemCount() {
-        return questionList.size();
+        return questionList == null ? 0 : questionList.size();
     }
 
     class PersonViewHolder extends RecyclerView.ViewHolder {
         TextView question;
-        TextView answer;
 
-        public PersonViewHolder(@NonNull View itemView) {
+        public PersonViewHolder(@NonNull View itemView)
+        {
             super(itemView);
             question = (TextView) itemView.findViewById(R.id.question);
-            answer = (TextView) itemView.findViewById(R.id.answer);
-
         }
     }
 }

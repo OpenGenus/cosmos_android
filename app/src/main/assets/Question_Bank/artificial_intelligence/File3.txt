@@ -1,0 +1,6 @@
+Given the co-ordinates of a point in 2D system ,you have find k-nearest neighbours of the point.
+Input- First line of input contains (x,y) co-ordinates of a point.
+	Second line of the integer contains an integer K.
+
+Output- A list containg k lines each contains 2 single space seperated integers.
+ 

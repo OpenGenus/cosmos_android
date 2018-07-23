@@ -2,7 +2,7 @@ package com.example.joker.cosmos_android.ViewModel;
 
 public class Question {
     String question;
-    String answer;
+    //String answer;
 
     public String getQuestion() {
         return question;
@@ -12,17 +12,17 @@ public class Question {
         this.question = question;
     }
 
-    public String getAnswer() {
+   /* public String getAnswer() {
         return answer;
-    }
+    }*/
 
-    public void setAnswer(String answer) {
+   /* public void setAnswer(String answer) {
         this.answer = answer;
-    }
+    }*/
 
-    public Question(String question, String answer) {
+    public Question(String question) {
         this.question = question;
-        this.answer = answer;
+       // this.answer = answer;
 
     }
 }

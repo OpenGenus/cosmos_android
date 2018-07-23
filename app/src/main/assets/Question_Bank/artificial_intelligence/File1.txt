@@ -1,0 +1,8 @@
+Use a simulated anneling or genetic algorithm to find the solution of travelling salesman problem.
+Input- First line contains N= number of cities
+	N lines follows.Each line contains labels: x y
+	where label= label of city
+	x=x co-ordinate
+	y=y co-ordinate
+Output- Output an optimal path in space seperated manner.
+
