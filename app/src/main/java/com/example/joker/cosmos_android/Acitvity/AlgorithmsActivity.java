@@ -144,8 +144,8 @@ public class AlgorithmsActivity extends AppCompatActivity {
                     String id = user.getUid();
                     String name = user.getDisplayName();
                     String email = user.getEmail();
-                    String imgURL = user.getPhotoUrl().toString();
 
+                    String imgURL = user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : null;
 
                     //create model
                     UserModel userModel = new UserModel(id, name, email, imgURL);
@@ -165,7 +165,7 @@ public class AlgorithmsActivity extends AppCompatActivity {
 
     }
 
-        private void setColor(int primary, int primaryDark) {
+    private void setColor(int primary, int primaryDark) {
 
         toolbar.setBackgroundColor(ContextCompat.getColor(AlgorithmsActivity.this, primary));
         tabLayout.setBackgroundColor(ContextCompat.getColor(AlgorithmsActivity.this, primary));
@@ -175,9 +175,6 @@ public class AlgorithmsActivity extends AppCompatActivity {
         }
 
     }
-
-
-
 
 
     private void StartSignIn() {
@@ -200,7 +197,7 @@ public class AlgorithmsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()){
+        switch (item.getItemId()) {
 
             case R.id.signout:
                 StartSignOut();
@@ -218,13 +215,14 @@ public class AlgorithmsActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     public void onComplete(@NonNull Task<Void> task) {
 
-                        Toast.makeText(AlgorithmsActivity.this,"Succesfully Signed Out",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AlgorithmsActivity.this, "Succesfully Signed Out", Toast.LENGTH_SHORT).show();
 
                         // ...
                     }
                 });
 
     }
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -240,7 +238,6 @@ public class AlgorithmsActivity extends AppCompatActivity {
         firebaseAuth.addAuthStateListener(authStateListener);
 
     }
-
 
 
 }
