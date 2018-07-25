@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "875847110397",
+    "firebase_url": "https://cosmos-d0ceb.firebaseio.com",
+    "project_id": "cosmos-d0ceb",
+    "storage_bucket": "cosmos-d0ceb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875847110397:android:12821ef7b7e8f020",
+        "android_client_info": {
+          "package_name": "com.example.joker.cosmos_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875847110397-dijvt6k905f98suo0da88gn8hh63ik2m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.joker.cosmos_android",
+            "certificate_hash": "b280fbf627fe90233ec4d59a384fcd31244864f4"
+          }
+        },
+        {
+          "client_id": "875847110397-b80j68iif0he118g42ksvdslifvgehtk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDIP8sZIY9Axg96I_M81_yf2cvLhQWWk8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875847110397-b80j68iif0he118g42ksvdslifvgehtk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

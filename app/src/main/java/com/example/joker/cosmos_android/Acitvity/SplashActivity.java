@@ -4,8 +4,10 @@ import android.app.ProgressDialog;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 
 import com.example.joker.cosmos_android.R;
@@ -23,7 +25,20 @@ public class SplashActivity extends AppCompatActivity {
         splashViewModel = ViewModelProviders.of(this).get(SplashViewModel.class);
 
         //check for new user
-        checkForUser();
+       // checkForUser();
+
+        Handler handler;
+
+        handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                startActivity(new Intent(SplashActivity.this, AlgorithmsActivity.class));
+
+                finish();
+            }
+        }, 3000);
 
     }
 
@@ -49,15 +64,17 @@ public class SplashActivity extends AppCompatActivity {
             progressDialog.dismiss();
         }
 
-        startMainActivity();
+      //  startMainActivity();
 
     }
+//
+//    private void startMainActivity() {
+//
+//        startActivity(new Intent(SplashActivity.this,AlgorithmsActivity.class));
+//        finish();
+//
+//    }
 
-    private void startMainActivity() {
 
-        startActivity(new Intent(SplashActivity.this,AlgorithmsActivity.class));
-        finish();
-
-    }
 
 }
