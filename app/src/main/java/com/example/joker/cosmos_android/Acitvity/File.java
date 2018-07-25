@@ -25,7 +25,7 @@ public class File extends AppCompatActivity {
         String fname=i.getStringExtra("filename");
         textView=findViewById(R.id.fileTextView);
         try {
-            BufferedReader reader=new BufferedReader(new InputStreamReader(getApplicationContext().getAssets().open(fname)));
+            BufferedReader reader=new BufferedReader(new InputStreamReader(getApplicationContext().getAssets().open("random.txt")));
             StringBuilder sb=new StringBuilder();
             String line=reader.readLine();
             while(line!=null)

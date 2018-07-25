@@ -21,6 +21,7 @@
         <activity android:name=".Acitvity.File"></activity>
         <activity android:name=".Acitvity.QuestionActivity"></activity>
 
+
     </application>
 
 </manifest>

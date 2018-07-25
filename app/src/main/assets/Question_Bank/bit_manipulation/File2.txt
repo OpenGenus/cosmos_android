@@ -1,0 +1,4 @@
+Given an undirected graph and a number m,determine if the graph can be colored with at most m colors such that no two adjacent vertices of the graphs are colored with same color.
+Input: 	A 2D array graph[V][V] where V is the numbre of vertices in graph and graph[V][V] is adjacency matrix representation of the graph. A value[i][j]=1 if there is a direct edge from i to j, otherwise it is 0.
+	An integer m which is maximum number of colors that can bbe used.	
+Output: An array color[V] that should have numbers from 1 to m,color[i] should represent the color assigned to the ith vertex. The code should also return false if the graph cannot be colored with m colors.

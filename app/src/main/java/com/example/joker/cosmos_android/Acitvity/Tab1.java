@@ -41,7 +41,7 @@ public class Tab1 extends Fragment implements AlgorithmsClickListener {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
-        algorithmAdapter = new AlgorithmAdapter(this);
+        algorithmAdapter = new AlgorithmAdapter(this, 1);
 
         recyclerView.setAdapter(algorithmAdapter);
 

@@ -13,57 +13,48 @@
         android:layout_height="450dp">
 
         <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="450dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
 
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="301dp"
+                android:layout_height="322dp">
 
-            <TextView
-                android:id="@+id/question"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="22sp"
-                android:textColor="@android:color/black"
-                android:layout_margin="20dp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/answer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/question"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                 />
-
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="left"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+            </android.support.v4.widget.NestedScrollView>
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="100dp">
+                android:layout_marginTop="20dp">
 
                 <Button
                     android:id="@+id/disscusion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:background="#51A149"
-                    android:text="Discussion"
-                    android:layout_margin="10dp"/>
+                    android:text="Discussion" />
 
                 <Button
                     android:id="@+id/submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:background="#51A149"
-                    android:text="Submit"
-                    android:layout_margin="10dp"/>
+                    android:text="Submit" />
             </LinearLayout>
 
         </LinearLayout>
