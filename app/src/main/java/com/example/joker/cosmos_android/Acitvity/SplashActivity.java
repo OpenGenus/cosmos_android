@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         splashViewModel = ViewModelProviders.of(this).get(SplashViewModel.class);
 
         //check for new user
-       // checkForUser();
+       checkForUser();
 
         Handler handler;
 
@@ -64,7 +64,7 @@ public class SplashActivity extends AppCompatActivity {
             progressDialog.dismiss();
         }
 
-      //  startMainActivity();
+      // startMainActivity();
 
     }
 //
