@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -59,6 +60,7 @@ public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmCl
         GridLayoutManager manager = new GridLayoutManager(this, 2);
         manager.setSpanSizeLookup(new GridLayoutManager.DefaultSpanSizeLookup());
         subAlgoRecyclerView.setLayoutManager(manager);
+        //using DividerItemDecoration from support library
 
         adapter = new SubAlgoAdapter(this);
         subAlgoRecyclerView.setAdapter(adapter);

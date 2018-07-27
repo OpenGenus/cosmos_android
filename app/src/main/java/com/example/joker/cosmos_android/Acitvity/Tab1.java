@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -18,7 +19,6 @@ import com.example.joker.cosmos_android.Adapter.AlgorithmAdapter;
 import com.example.joker.cosmos_android.R;
 import com.example.joker.cosmos_android.Utils.AlgorithmsClickListener;
 import com.example.joker.cosmos_android.ViewModel.AlgorithmsViewModel;
-
 
 
 import java.util.Objects;
@@ -40,6 +40,8 @@ public class Tab1 extends Fragment implements AlgorithmsClickListener {
         recyclerView = view.findViewById(R.id.algoRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL);
+        recyclerView.addItemDecoration(dividerItemDecoration);
 
         algorithmAdapter = new AlgorithmAdapter(this, 1);
 
@@ -60,8 +62,8 @@ public class Tab1 extends Fragment implements AlgorithmsClickListener {
     @Override
     public void getSubAlgo(String id) {
 
-        Intent intent = new Intent(getContext(),SubAlgoActivity.class);
-        intent.putExtra("id",id);
+        Intent intent = new Intent(getContext(), SubAlgoActivity.class);
+        intent.putExtra("id", id);
         startActivity(intent);
 
     }
