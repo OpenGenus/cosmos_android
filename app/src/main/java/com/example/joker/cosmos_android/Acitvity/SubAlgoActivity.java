@@ -99,7 +99,7 @@ public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmCl
 
                 List<String> fileName = new ArrayList<>();
 
-                if(algorithmFiles != null){
+                if (algorithmFiles != null) {
                     fileName = getFileName(algorithmFiles);
                 }
 
@@ -115,99 +115,99 @@ public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmCl
     private List<String> getFileName(AlgorithmFiles algorithmFiles) {
         List<String> fileNames = new ArrayList<>();
 
-        if(!algorithmFiles.getC().equals("null")){
+        if (!algorithmFiles.getC().equals("null")) {
             fileNames.add(algorithmFiles.getC());
         }
 
-        if(!algorithmFiles.getCpp().equals("null")){
+        if (!algorithmFiles.getCpp().equals("null")) {
             fileNames.add(algorithmFiles.getCpp());
         }
 
-        if(!algorithmFiles.getCs().equals("null")){
+        if (!algorithmFiles.getCs().equals("null")) {
             fileNames.add(algorithmFiles.getCs());
         }
 
-        if(!algorithmFiles.getData().equals("null")){
+        if (!algorithmFiles.getData().equals("null")) {
             fileNames.add(algorithmFiles.getData());
         }
 
-        if(!algorithmFiles.getElm().equals("null")){
+        if (!algorithmFiles.getElm().equals("null")) {
             fileNames.add(algorithmFiles.getElm());
         }
 
-        if(!algorithmFiles.getExs().equals("null")){
+        if (!algorithmFiles.getExs().equals("null")) {
             fileNames.add(algorithmFiles.getExs());
         }
 
-        if(!algorithmFiles.getF().equals("null")){
+        if (!algorithmFiles.getF().equals("null")) {
             fileNames.add(algorithmFiles.getF());
         }
 
-        if(!algorithmFiles.getGo().equals("null")){
+        if (!algorithmFiles.getGo().equals("null")) {
             fileNames.add(algorithmFiles.getGo());
         }
 
-        if(!algorithmFiles.getH().equals("null")){
+        if (!algorithmFiles.getH().equals("null")) {
             fileNames.add(algorithmFiles.getH());
         }
 
-        if(!algorithmFiles.getHs().equals("null")){
+        if (!algorithmFiles.getHs().equals("null")) {
             fileNames.add(algorithmFiles.getHs());
         }
 
-        if(!algorithmFiles.getJava().equals("null")){
+        if (!algorithmFiles.getJava().equals("null")) {
             fileNames.add(algorithmFiles.getJava());
         }
 
-        if(!algorithmFiles.getJl().equals("null")){
+        if (!algorithmFiles.getJl().equals("null")) {
             fileNames.add(algorithmFiles.getJl());
         }
 
-        if(!algorithmFiles.getJs().equals("null")){
+        if (!algorithmFiles.getJs().equals("null")) {
             fileNames.add(algorithmFiles.getJs());
         }
 
-        if(!algorithmFiles.getKt().equals("null")){
+        if (!algorithmFiles.getKt().equals("null")) {
             fileNames.add(algorithmFiles.getKt());
         }
 
-        if(!algorithmFiles.getM().equals("null")){
+        if (!algorithmFiles.getM().equals("null")) {
             fileNames.add(algorithmFiles.getM());
         }
 
-        if(!algorithmFiles.getMd().equals("null")){
+        if (!algorithmFiles.getMd().equals("null")) {
             fileNames.add(algorithmFiles.getMd());
         }
 
-        if(!algorithmFiles.getPhp().equals("null")){
+        if (!algorithmFiles.getPhp().equals("null")) {
             fileNames.add(algorithmFiles.getPhp());
         }
 
-        if(!algorithmFiles.getPy().equals("null")){
+        if (!algorithmFiles.getPy().equals("null")) {
             fileNames.add(algorithmFiles.getPy());
         }
 
-        if(!algorithmFiles.getRb().equals("null")){
+        if (!algorithmFiles.getRb().equals("null")) {
             fileNames.add(algorithmFiles.getRb());
         }
 
-        if(!algorithmFiles.getRs().equals("null")){
+        if (!algorithmFiles.getRs().equals("null")) {
             fileNames.add(algorithmFiles.getRs());
         }
 
-        if(!algorithmFiles.getSh().equals("null")){
+        if (!algorithmFiles.getSh().equals("null")) {
             fileNames.add(algorithmFiles.getSh());
         }
 
-        if(!algorithmFiles.getSml().equals("null")){
+        if (!algorithmFiles.getSml().equals("null")) {
             fileNames.add(algorithmFiles.getSml());
         }
 
-        if(!algorithmFiles.getSwift().equals("null")){
+        if (!algorithmFiles.getSwift().equals("null")) {
             fileNames.add(algorithmFiles.getSwift());
         }
 
-        if(!algorithmFiles.getTs().equals("null")){
+        if (!algorithmFiles.getTs().equals("null")) {
             fileNames.add(algorithmFiles.getTs());
         }
 
@@ -217,9 +217,9 @@ public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmCl
     @Override
     public void onBackPressed() {
 
-        if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED){
+        if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-        }else{
+        } else {
             super.onBackPressed();
         }
 
@@ -230,9 +230,9 @@ public class SubAlgoActivity extends AppCompatActivity implements SubAlgorithmCl
     public void onFileClick(String fileName) {
 
 
-        Toast.makeText(this,fileName,Toast.LENGTH_SHORT).show();
-        Intent intent=new Intent(getApplicationContext(),File.class);
-        intent.putExtra("filename",fileName);
+        Toast.makeText(this, fileName, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), File.class);
+        intent.putExtra("filename", fileName);
         startActivity(intent);
 
 

@@ -13,8 +13,8 @@
         android:padding="@dimen/large_padding"
         android:textColor="@android:color/black"
         android:textSize="22sp"
-       android:gravity="center_vertical"
-        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:background="@color/white_1000"
         tools:text="Back Tracking"/>
 
 </FrameLayout>

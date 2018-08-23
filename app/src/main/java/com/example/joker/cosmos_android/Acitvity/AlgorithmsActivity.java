@@ -117,7 +117,7 @@ public class AlgorithmsActivity extends AppCompatActivity {
                         setColor(R.color.teal_500, R.color.teal_700);
                         break;
                     case 2:
-                        setColor(R.color.orange_600, R.color.orange_800);
+                        setColor(R.color.cyan_600, R.color.cyan_800);
                 }
             }
 
@@ -217,7 +217,7 @@ public class AlgorithmsActivity extends AppCompatActivity {
 
                         Toast.makeText(AlgorithmsActivity.this, "Succesfully Signed Out", Toast.LENGTH_SHORT).show();
 
-                        // ...
+
                     }
                 });
 

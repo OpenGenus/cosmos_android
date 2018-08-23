@@ -47,8 +47,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Person
     class PersonViewHolder extends RecyclerView.ViewHolder {
         TextView question;
 
-        public PersonViewHolder(@NonNull View itemView)
-        {
+        public PersonViewHolder(@NonNull View itemView) {
             super(itemView);
             question = (TextView) itemView.findViewById(R.id.question);
         }

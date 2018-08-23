@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ public class Tab2 extends Fragment implements CourseClickListener {
 
     private AlgorithmAdapter algorithmAdapter;
     private AlgorithmsViewModel viewModel;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -37,10 +39,12 @@ public class Tab2 extends Fragment implements CourseClickListener {
 
         button = (Button) v.findViewById(R.id.button);
 
-        rv=v.findViewById(R.id.course_recycler_view);
+        rv = v.findViewById(R.id.course_recycler_view);
 
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL);
+        rv.addItemDecoration(dividerItemDecoration);
 
         algorithmAdapter = new AlgorithmAdapter(this, 2);
 
@@ -56,7 +60,7 @@ public class Tab2 extends Fragment implements CourseClickListener {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                  }
+            }
         });
         return v;
 
@@ -65,9 +69,9 @@ public class Tab2 extends Fragment implements CourseClickListener {
     @Override
     public void getQuestion(String course_name) {
 
-        Toast.makeText(getContext(),course_name,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), course_name, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity(), QuestionActivity.class);
-        intent.putExtra("course_name",course_name);
+        intent.putExtra("course_name", course_name);
         startActivity(intent);
 
 

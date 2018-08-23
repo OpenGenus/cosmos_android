@@ -27,9 +27,9 @@ public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.View
     private AlgorithmsClickListener clickListener;
     private CourseClickListener courseClickListener;
 
-    private int TAB_NO = 0 ;
+    private int TAB_NO = 0;
 
-    public AlgorithmAdapter(Tab1 context , int tab) {
+    public AlgorithmAdapter(Tab1 context, int tab) {
 
         clickListener = context;
         this.TAB_NO = tab;
@@ -83,16 +83,16 @@ public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.View
 
             textView.setText(algorithms.get(position).getAlgoName());
 
-            if(TAB_NO == 1) {
+            if (TAB_NO == 1) {
                 //click listner for alog
                 textView.setOnClickListener((v) -> {
                     String id = algorithms.get(position).getId();
                     clickListener.getSubAlgo(id);
                 });
-            }else if(TAB_NO == 2){
+            } else if (TAB_NO == 2) {
 
                 //click lister for course
-                textView.setOnClickListener((v)->{
+                textView.setOnClickListener((v) -> {
                     String name = algorithms.get(position).getAlgoName();
                     courseClickListener.getQuestion(name);
                 });

@@ -42,18 +42,18 @@
 
                 <Button
                     android:id="@+id/disscusion"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:background="#51A149"
+                    android:background="@drawable/rounded_button"
                     android:text="Discussion" />
 
                 <Button
                     android:id="@+id/submit"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:background="#51A149"
+                    android:background="@drawable/rounded_button"
                     android:text="Submit" />
             </LinearLayout>
 

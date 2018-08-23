@@ -31,30 +31,28 @@ public class QuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_main);
 
-        course_name=getIntent().getStringExtra("course_name");
-        Toast.makeText(this,course_name,Toast.LENGTH_SHORT).show();
+        course_name = getIntent().getStringExtra("course_name");
+        Toast.makeText(this, course_name, Toast.LENGTH_SHORT).show();
 
         //getting the recyclerview from xml
         recyclerView = findViewById(R.id.rv);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         //initializing the productlist
         productList = new ArrayList<>();
         //adding some items to our list
 
-        for (int count = 1; count<6; count++)
-        {
-            StringBuilder sb=new StringBuilder();
+        for (int count = 1; count < 6; count++) {
+            StringBuilder sb = new StringBuilder();
             String line;
 
             try {
-                BufferedReader reader=new BufferedReader(new InputStreamReader(getApplicationContext().getAssets().open("Question_Bank/"+course_name+"/File"+count+".txt")));
+                BufferedReader reader = new BufferedReader(new InputStreamReader(getApplicationContext().getAssets().open("Question_Bank/" + course_name + "/File" + count + ".txt")));
                 line = reader.readLine();
-                while(line!=null)
-                {
+                while (line != null) {
 
                     sb.append(line);
-                    line=reader.readLine();
+                    line = reader.readLine();
                     sb.append("\n");
 
                 }
@@ -67,7 +65,6 @@ public class QuestionActivity extends AppCompatActivity {
 
 
         }
-
 
 
         //creating recyclerview adapter

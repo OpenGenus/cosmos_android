@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         splashViewModel = ViewModelProviders.of(this).get(SplashViewModel.class);
 
         //check for new user
-       checkForUser();
+        checkForUser();
 
         Handler handler;
 
@@ -44,15 +44,15 @@ public class SplashActivity extends AppCompatActivity {
 
     private void checkForUser() {
 
-        SharedPreferences sp = getSharedPreferences("details",MODE_PRIVATE);
+        SharedPreferences sp = getSharedPreferences("details", MODE_PRIVATE);
 
-        boolean isNewUser = sp.getBoolean("new",true);
+        boolean isNewUser = sp.getBoolean("new", true);
 
         SharedPreferences.Editor editor = sp.edit();
-        editor.putBoolean("new",false);
+        editor.putBoolean("new", false);
         editor.apply();
 
-        if(isNewUser){
+        if (isNewUser) {
 
             ProgressDialog progressDialog = new ProgressDialog(SplashActivity.this);
             progressDialog.setTitle("Preparing Database");
@@ -64,7 +64,7 @@ public class SplashActivity extends AppCompatActivity {
             progressDialog.dismiss();
         }
 
-      // startMainActivity();
+        // startMainActivity();
 
     }
 //
@@ -74,7 +74,6 @@ public class SplashActivity extends AppCompatActivity {
 //        finish();
 //
 //    }
-
 
 
 }
