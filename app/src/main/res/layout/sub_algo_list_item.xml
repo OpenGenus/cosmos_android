@@ -10,9 +10,9 @@
         android:id="@+id/subAlgoTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="BackTracking"
         android:padding="@dimen/medium_padding"
+        android:textColor="@color/black_1000"
         android:textSize="@dimen/large_text"
-        android:textColor="@color/black_1000"/>
+        tools:text="BackTracking" />
 
 </LinearLayout>

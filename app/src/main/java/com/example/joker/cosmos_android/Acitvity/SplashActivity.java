@@ -4,8 +4,10 @@ import android.app.ProgressDialog;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 
 import com.example.joker.cosmos_android.R;
@@ -25,19 +27,32 @@ public class SplashActivity extends AppCompatActivity {
         //check for new user
         checkForUser();
 
+        Handler handler;
+
+        handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                startActivity(new Intent(SplashActivity.this, AlgorithmsActivity.class));
+
+                finish();
+            }
+        }, 3000);
+
     }
 
     private void checkForUser() {
 
-        SharedPreferences sp = getSharedPreferences("details",MODE_PRIVATE);
+        SharedPreferences sp = getSharedPreferences("details", MODE_PRIVATE);
 
-        boolean isNewUser = sp.getBoolean("new",true);
+        boolean isNewUser = sp.getBoolean("new", true);
 
         SharedPreferences.Editor editor = sp.edit();
-        editor.putBoolean("new",false);
+        editor.putBoolean("new", false);
         editor.apply();
 
-        if(isNewUser){
+        if (isNewUser) {
 
             ProgressDialog progressDialog = new ProgressDialog(SplashActivity.this);
             progressDialog.setTitle("Preparing Database");
@@ -49,15 +64,16 @@ public class SplashActivity extends AppCompatActivity {
             progressDialog.dismiss();
         }
 
-        startMainActivity();
+        // startMainActivity();
 
     }
+//
+//    private void startMainActivity() {
+//
+//        startActivity(new Intent(SplashActivity.this,AlgorithmsActivity.class));
+//        finish();
+//
+//    }
 
-    private void startMainActivity() {
-
-        startActivity(new Intent(SplashActivity.this,AlgorithmsActivity.class));
-        finish();
-
-    }
 
 }

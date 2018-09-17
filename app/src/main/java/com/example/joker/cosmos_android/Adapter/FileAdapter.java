@@ -28,13 +28,13 @@ public class FileAdapter extends RecyclerView.Adapter<FileAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.file_list_item,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.file_list_item, parent, false);
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            holder.bind(position);
+        holder.bind(position);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class FileAdapter extends RecyclerView.Adapter<FileAdapter.ViewHolder> {
 
             textView.setText(algorithmFiles.get(position).trim());
 
-            textView.setOnClickListener((v)->{
+            textView.setOnClickListener((v) -> {
                 fileClickListner.onFileClick(algorithmFiles.get(position));
             });
 

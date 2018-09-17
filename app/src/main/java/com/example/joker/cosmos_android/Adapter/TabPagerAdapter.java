@@ -20,7 +20,7 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
     private List<String> fragmentTitle = new ArrayList<>();
     private Context context;
 
-    public TabPagerAdapter(FragmentManager fm,Context context) {
+    public TabPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }

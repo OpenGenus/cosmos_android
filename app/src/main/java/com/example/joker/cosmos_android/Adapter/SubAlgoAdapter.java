@@ -32,7 +32,6 @@ public class SubAlgoAdapter extends RecyclerView.Adapter<SubAlgoAdapter.ViewHold
     }
 
 
-
     public SubAlgoAdapter(Context context) {
         this.context = context;
     }
@@ -42,7 +41,7 @@ public class SubAlgoAdapter extends RecyclerView.Adapter<SubAlgoAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-      View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_row,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_row, parent, false);
 
         return new ViewHolder(v);
     }
@@ -52,9 +51,9 @@ public class SubAlgoAdapter extends RecyclerView.Adapter<SubAlgoAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.textView.setText(subAlgorithms.get(position).getSubAlgorithm());
-        holder.cardView.setOnClickListener((v)->
+        holder.cardView.setOnClickListener((v) ->
         {
-            int id=subAlgorithms.get(position).getId();
+            int id = subAlgorithms.get(position).getId();
             clickListener.languages(id);
         });
 
@@ -75,7 +74,6 @@ public class SubAlgoAdapter extends RecyclerView.Adapter<SubAlgoAdapter.ViewHold
     }
 
 
-
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
@@ -86,8 +84,7 @@ public class SubAlgoAdapter extends RecyclerView.Adapter<SubAlgoAdapter.ViewHold
             super(itemView);
 
             textView = itemView.findViewById(R.id.textView);
-            cardView=itemView.findViewById(R.id.card_view);
-
+            cardView = itemView.findViewById(R.id.card_view);
 
 
         }

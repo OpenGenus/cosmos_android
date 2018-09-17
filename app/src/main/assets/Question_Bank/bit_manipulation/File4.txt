@@ -1,0 +1,4 @@
+You are given n positive integers A={a[1],a[2]...a[n]} and a integer S. You have to find weather there exist a non-empty subset of A whose sum i greater than or equal to S.
+You have to print the size of minimal subset whose sum is greater than or equal to S.If there exist no such subset then print -1 instead.
+Input- First line will comtain an integer,N ,which is the size of list. A second line contains n spaced integers representing the elemnts of list A.
+Output- Print the size of the minimal subset whose sum is greater than or equal to S, if there is no such subset then print -1.  

@@ -304,5 +304,6 @@
 
     <color name="background_light" >#ffffff</color>
     <color name="foreground_dark">#070303</color>
+    <color name="colorAccent1">#FF4081</color>
 
 </resources>

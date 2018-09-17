@@ -1,0 +1,3 @@
+Amaira loves solving sudoku but finds it diffficult to ceck if the soduku she loved is valid or not.Help her to check he same.
+Input- First lines contain T integers denoting the number of test cases.Each case will contain 9 lines each containing 9 integers denoting the suduko puzzle.
+Output- For each case print 'valid' if sudoku is valid,else 'invalid'.

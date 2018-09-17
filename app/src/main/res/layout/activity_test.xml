@@ -4,6 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Acitvity.TestActivity">
+    tools:context=".Acitvity.File">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+        <HorizontalScrollView
+            android:layout_width="320dp"
+            android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/fileTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="25dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        </HorizontalScrollView>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

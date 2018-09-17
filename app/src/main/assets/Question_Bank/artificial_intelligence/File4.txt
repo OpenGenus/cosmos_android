@@ -1,0 +1,3 @@
+Consider a CNF with each clause having only  terms,is it possible to assign such values to a variable so that the CNF is true?
+Input- F=(x1 V x2)^(x2 V x1)
+Output-The given expression is satisfiable. (for x1=False, x2=True)

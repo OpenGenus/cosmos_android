@@ -12,9 +12,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.joker.cosmos_android.Acitvity.Tab1;
+import com.example.joker.cosmos_android.Acitvity.Tab2;
 import com.example.joker.cosmos_android.Database.Algorithms;
 import com.example.joker.cosmos_android.R;
 import com.example.joker.cosmos_android.Utils.AlgorithmsClickListener;
+import com.example.joker.cosmos_android.Utils.CourseClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +25,19 @@ public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.View
 
     private List<Algorithms> algorithms = new ArrayList<>();
     private AlgorithmsClickListener clickListener;
+    private CourseClickListener courseClickListener;
 
-    public AlgorithmAdapter(Tab1 context) {
+    private int TAB_NO = 0;
+
+    public AlgorithmAdapter(Tab1 context, int tab) {
+
         clickListener = context;
+        this.TAB_NO = tab;
+    }
+
+    public AlgorithmAdapter(Tab2 context, int tab) {
+        courseClickListener = context;
+        this.TAB_NO = tab;
     }
 
     @NonNull
@@ -71,11 +83,20 @@ public class AlgorithmAdapter extends RecyclerView.Adapter<AlgorithmAdapter.View
 
             textView.setText(algorithms.get(position).getAlgoName());
 
-            textView.setOnClickListener((v) -> {
-                String id = algorithms.get(position).getId();
-                clickListener.getSubAlgo(id);
-            });
+            if (TAB_NO == 1) {
+                //click listner for alog
+                textView.setOnClickListener((v) -> {
+                    String id = algorithms.get(position).getId();
+                    clickListener.getSubAlgo(id);
+                });
+            } else if (TAB_NO == 2) {
 
+                //click lister for course
+                textView.setOnClickListener((v) -> {
+                    String name = algorithms.get(position).getAlgoName();
+                    courseClickListener.getQuestion(name);
+                });
+            }
         }
     }
 }

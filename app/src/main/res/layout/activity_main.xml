@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Acitvity.AlgorithmsActivity">
+    tools:context=".Acitvity.AlgorithmsActivity"
+    tools:ignore="ExtraText">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -18,19 +19,19 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@color/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways|snap"
-            android:background="@color/colorPrimary"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
+            app:tabIndicatorColor="@android:color/white"
             app:tabIndicatorHeight="3dp"
             app:tabSelectedTextColor="@android:color/white"
-            app:tabTextColor="@color/grey_300"
-            app:tabIndicatorColor="@android:color/white"/>
+            app:tabTextColor="@color/grey_300" />
 
     </android.support.design.widget.AppBarLayout>
 
@@ -38,6 +39,7 @@
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
 
 </android.support.design.widget.CoordinatorLayout>

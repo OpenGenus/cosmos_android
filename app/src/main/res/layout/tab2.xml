@@ -3,13 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/amber_50">
+    android:background="@color/white_1000">
 
-    <TextView
-        android:id="@+id/textView"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/course_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="Fragment2"
-        android:textSize="30dp" />
+        android:layout_height="400dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"></android.support.v7.widget.RecyclerView>
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="125dp"
+        android:onClick="TestButton"
+        android:text="@string/take_a_test" />
 </RelativeLayout>
