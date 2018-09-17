@@ -20,4 +20,9 @@
         completions.
     </string>
     <string name="take_a_test">Take a test ?</string>
+    <string name="recently_viewd">Recently Viewed Codes</string>
+    <string name="codes_for_second">Codes for second Review</string>
+    <string name="recommended_codes">Recommended Codes</string>
+    <string name="random_codes">Random Codes</string>
+    <string name="ask_for_live_help">Ask for live Help!</string>
 </resources>
