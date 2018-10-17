@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white_1000">
+    android:background="@color/white_1000"
+    android:layout_marginBottom="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
+   <Button
+       android:id="@+id/recently_viewed"
+       android:layout_width="match_parent"
+       android:layout_height="70dp"
+       android:text="@string/recently_viewd"
+       />
+    <Button
+        android:id="@+id/codes_for_second_review"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="Fragment3"
-        android:textSize="30dp" />
-</RelativeLayout>
+        android:layout_height="70dp"
+        android:text="@string/codes_for_second"/>
+    <Button
+        android:id="@+id/recommended_codes"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/recommended_codes"/>
+    <Button
+        android:id="@+id/random_codes"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/random_codes"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/ask_for_live_help"
+        android:id="@+id/askforhelp"/>
+</LinearLayout>
